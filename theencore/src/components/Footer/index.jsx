@@ -6,7 +6,7 @@ function Footer() {
   return <StickyFooter
   bottomThreshold={50}
   normalStyles={{
-  backgroundColor: "#999999",
+  backgroundColor: "black",
   padding: "2rem"
   }}
   stickyStyles={{
@@ -14,7 +14,7 @@ function Footer() {
   padding: "2rem"
   }}
 >
-  Add any footer markup here
+  <p style={{color: 'white', textAlign: 'center'}}> Lorem Ipsum </p>
 </StickyFooter>
 }
 
