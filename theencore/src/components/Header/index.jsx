@@ -9,7 +9,7 @@ function Header() {
       <div className="row">
         <div className="headerBox col-md-12">
           <h1>The Encore</h1>
-          <p>Where the show continues</p>
+          <p className="headerSubtitle">Where the show goes on.</p>
         </div>
       </div>
     </div>

@@ -1,15 +1,20 @@
 h1 {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 20px;
+    color: gray;
+    text-shadow: 2px 2px gold;
 }
-p {
+.headerSubtitle {
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    color: black;
+    font-family: 'Sofia', cursive;
+    
 }
 
 .headerBox {
-    margin-top: 20px;
-    border: solid;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border: inset gold;
+    background: rgb(175,172,232);
+    background: radial-gradient(circle, rgba(175,172,232,1) 0%, rgba(18,18,29,0.639093137254902) 0%, rgba(27,33,34,1) 100%);    
 }

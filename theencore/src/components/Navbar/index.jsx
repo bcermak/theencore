@@ -69,7 +69,7 @@ export default function SearchAppBar() {
     <div className={classes.root}>
       <AppBar 
       position="static"
-      style={{backgroundColor:"black"}}>
+      style={{backgroundColor:"black", marginBottom:"50px"}}>
         <Toolbar>
           <IconButton
             edge="start"
@@ -84,7 +84,6 @@ export default function SearchAppBar() {
           className={classes.title} 
           variant="h6" 
           noWrap>
-            The Encore
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>

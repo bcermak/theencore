@@ -1,6 +1,26 @@
+.container {
+    
+}
+
 .mainForm {
     margin: 0 auto;
     margin-top: 5%;
     margin-bottom: 5%;
     text-align: center;
+    width: 500px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.postHolder {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 15px;
+    width: 500px;
+}
+
+.postDate {
+    font-size: small;
 }
