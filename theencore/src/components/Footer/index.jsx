@@ -1,9 +1,10 @@
 import React from "react";
 import StickyFooter from 'react-sticky-footer';
+import './style.css'
 
 
 function Footer() {
-  return <StickyFooter
+  return <div className="container"><div className="footer"><StickyFooter
   bottomThreshold={50}
   normalStyles={{
   backgroundColor: "black",
@@ -16,6 +17,8 @@ function Footer() {
 >
   <p style={{color: 'white', textAlign: 'center'}}> Lorem Ipsum </p>
 </StickyFooter>
+</div>
+</div>
 }
 
 export default Footer;
