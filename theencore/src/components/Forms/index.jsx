@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import Chosen from "react";
 
 
 
@@ -9,11 +8,19 @@ export default function PostForm() {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="mainForm">
-                        <Chosen onChange={value => console.log(value)}>
-      <option>vanilla</option>
-      <option>chocolate</option>
-      <option>strawberry</option>
-    </Chosen>
+                            <div className="btn-group float-left" id="myDropdown">
+                            <a class="btn dropdown-toggle" dataToggle="dropdown" href="#">
+                                Menu
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Choice1</a></li>
+                                <li><a href="#">Choice2</a></li>
+                                <li><a href="#">Choice3</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Choice..</a></li>
+                            </ul>
+                            </div>
                             <div className="form-group">
                                 <label for="title"> Title </label>
                                 <input required type="text" name="title" id="title" class="form-control"></input>
