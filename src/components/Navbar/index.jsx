@@ -7,6 +7,10 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 
+const handleChange = function handleChange(e) {
+  console.log("Success")
+}
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -75,7 +79,7 @@ export default function SearchAppBar() {
             edge="start"
             className={classes.menuButton}
             color="primary"
-            aria-label="open drawer"
+            aria-label="open drawer" onChange={handleChange}
           >
             <MenuIcon />
           </IconButton>
