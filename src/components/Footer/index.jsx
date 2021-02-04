@@ -15,7 +15,7 @@ function Footer() {
   padding: "2rem"
   }}
 >
-  <p style={{color: 'white', textAlign: 'center'}}> Lorem Ipsum </p>
+  <p style={{color: 'white', textAlign: 'center'}}> Copyright &copy; 2021 </p>
 </StickyFooter>
 </div>
 </div>
