@@ -6,7 +6,9 @@ export default class PostForm extends Component {
     constructor() {
         super();
         this.state = {
-            title: "TBD"
+            title: "TBD",
+            description: "Lorem Ipsom",
+            date: "TBD" 
         };
     }
 
@@ -48,8 +50,8 @@ export default class PostForm extends Component {
                         <div className="">
                             <h3 className="postTitle"> {this.state.title}  </h3>
                             <h3 className="postDescription">Description: </h3>
-                            <p className="postBody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, exercitationem architecto. Saepe sapiente nulla accusantium doloremque nobis architecto distinctio, in, officiis sit eaque commodi illum reprehenderit iure quod dicta molestias.</p>
-                            <p className="postDate">Date Posted: </p>
+                            <p className="postBody">{this.state.description}</p>
+                            <p className="postDate">Date Posted: {this.state.date} </p>
                         </div>
                     </div>
                 </div>
