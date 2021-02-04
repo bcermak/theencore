@@ -14,7 +14,14 @@ router.get('/', (req, res) => {
         .catch((error)=> {
             console.log(error)
         });
-})
+});
+
+router.post('/save', (req, res) => {
+    console.log('Body: ', req.body)
+    res.json ({
+        msg: 'We received your data!!!!'
+    });
+});
 
 router.get('/name', (req, res) => {
     const data = {
@@ -22,6 +29,6 @@ router.get('/name', (req, res) => {
         age: 57
     }
     res.json (data);
-})
+});
 
 module.exports = router;

@@ -17,9 +17,7 @@ mongoose.connection.on('connected', ()=>{
     console.log("Mongoose is connected to DB")
 });
 
-
 // HTTP request logger
-
 app.use(morgan('tiny'));
 app.use('/api', routes);
 
