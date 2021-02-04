@@ -79,10 +79,10 @@ export default class PostForm extends Component {
                 <div className="row">
                     <div className="postHolder col-md-12">
                         <div className="">
-                            <h3 className="postTitle">{this.state.title}  </h3>
+                            <h3 className="postTitle"> Title: </h3>
                             <h3 className="postDescription">Description: </h3>
-                            <p className="postBody">{this.state.body}</p>
-                            <p className="postDate">Date Posted: {this.state.date} </p>
+                            <p className="postBody"></p>
+                            <p className="postDate">Date Posted: </p>
                         </div>
                     </div>
                 </div>
