@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
         });
 })
 
-router.get('/api/name', (req, res) => {
+router.get('/name', (req, res) => {
     const data = {
         username: 'SHTSTX',
         age: 57
