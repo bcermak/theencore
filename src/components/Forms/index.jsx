@@ -1,10 +1,18 @@
-import React from "react";
+import React, { Component} from "react";
+import Axios from "axios";
 import "./style.css";
 
+export default class PostForm extends Component {
+    constructor() {
+        super();
+        this.state = {
+            title: "TBD"
+        };
+    }
 
-
-export default function PostForm() {
-    return <div className="container">
+    render() {
+        return (
+            <div className="container">
                 <div className="row">
                     <div className="col-md-12">
                         <div className="mainForm">
@@ -38,7 +46,7 @@ export default function PostForm() {
                 <div className="row">
                     <div className="postHolder col-md-12">
                         <div className="">
-                            <h3 className="postTitle">Title: </h3>
+                            <h3 className="postTitle"> {this.state.title}  </h3>
                             <h3 className="postDescription">Description: </h3>
                             <p className="postBody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, exercitationem architecto. Saepe sapiente nulla accusantium doloremque nobis architecto distinctio, in, officiis sit eaque commodi illum reprehenderit iure quod dicta molestias.</p>
                             <p className="postDate">Date Posted: </p>
@@ -46,6 +54,12 @@ export default function PostForm() {
                     </div>
                 </div>
             </div>
+        )
+    }
+
+}
+
 
     
-}
+
+
