@@ -12,14 +12,9 @@ export default class PostForm extends Component {
         };
     }
 
-    handleChange = (event) => {
-        const target = event.target;
-        const name = target.name;
-        const value = target.value;
-
-        this.setState({
-            [name]: value
-        })
+    handleChange = ({target}) => {
+        const { name, value } =  target;
+        this.setState({[name]: value})
     };
 
     submit = (event) => {
@@ -36,10 +31,18 @@ export default class PostForm extends Component {
             data: payload
         })
         .then(() => {
-            console.log('Data has been sent to the server')
+            console.log('Data has been sent to the server');
+            this.resetUserInputs();
         })
         .catch(() => {
-            console.log('Internal Server Error!')
+            console.log('Internal Server Error!');
+        })
+    }
+
+    resetUserInputs = () => {
+        this.setState({
+            title: '',
+            body: ''
         })
     }
 
