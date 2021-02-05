@@ -3,19 +3,34 @@ import axios from "axios";
 import "./style.css";
 
 export default class PostForm extends Component {
-    constructor() {
-        super();
-        this.state = {
-            title: "",
-            body: "",
-            date: "" 
+    
+        state = {
+            title:'',
+            body: '',
+            posts: []
         };
+    
+
+    componentDidMount = () => {
+        this.getBlogPost();
     }
 
-    handleChange = ({target}) => {
-        const { name, value } =  target;
-        this.setState({[name]: value})
-    };
+    getBlogPost = () => {
+        axios.get('/api')
+          .then((response) => {
+            const data = response.data;
+            this.setState({ posts: data });
+            console.log('Data has been received');
+          })
+          .catch(() => {
+            alert('Error retrieving data!!!');
+          });
+      }
+
+    handleChange = ({ target }) => {
+        const { name, value } = target;
+        this.setState({ [name]: value });
+      };
 
     submit = (event) => {
         event.preventDefault();
@@ -44,7 +59,21 @@ export default class PostForm extends Component {
             title: '',
             body: ''
         })
-    }
+    };
+
+    displayPost = (posts) => {
+        if (!posts.length) return null;
+
+        return posts.map((post, index) => {
+            <div key={index}>
+                <h4> {post.title}</h4>
+                <p> {post.body}</p>
+            </div>
+
+
+        });
+
+    };
 
     render() {
         console.log('State:', this.state)
@@ -80,12 +109,9 @@ export default class PostForm extends Component {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="postHolder col-md-12">
-                        <div className="">
-                            <h3 className="postTitle"> Title: </h3>
-                            <h3 className="postDescription">Description: </h3>
-                            <p className="postBody"></p>
-                            <p className="postDate">Date Posted: </p>
+                    <div className="col-md-12">
+                        <div className="blog-">
+                            {this.displayPost(this.state.posts)}
                         </div>
                     </div>
                 </div>
