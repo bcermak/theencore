@@ -7,6 +7,7 @@ class Posts extends React.Component {
     state = {
         title:'',
         body: '',
+        miles: '',
         posts: []
     };
     
@@ -37,7 +38,9 @@ class Posts extends React.Component {
     
     const payload = {
         title: this.state.title,
+        miles: this.state.miles,
         body: this.state.body
+        
     };
     
     axios({
@@ -67,7 +70,8 @@ class Posts extends React.Component {
       return posts.map((post, index) => (
         <div className='postHolder' key={index}>
             <h3> {post.title}</h3>
-            <p> {post.body}</p>
+            <p> Distance: {post.miles} Miles </p>
+            <p>  Trail Notes: {post.body}</p>
         </div>
     
     
@@ -89,15 +93,25 @@ class Posts extends React.Component {
                                     required 
                                     type="text" 
                                     name="title"
-                                    placeholder="Enter Title" 
+                                    placeholder="Trail Name" 
                                     value={this.state.title}
+                                    onChange={this.handleChange}   
+                                    />
+                                </div>
+                                <div className="form-input">
+                                    <input
+                                    required 
+                                    type="text" 
+                                    name="miles"
+                                    placeholder="Miles" 
+                                    value={this.state.miles}
                                     onChange={this.handleChange}   
                                     />
                                 </div>
                                 <div className="form-input">
                                     <textarea 
                                     required name="body" 
-                                    placeholder="How was the show?" 
+                                    placeholder="Trail Notes?" 
                                     cols="30" row="10" 
                                     value={this.state.body}
                                     onChange={this.handleChange}  
@@ -109,7 +123,7 @@ class Posts extends React.Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-12">
+                        <div className="col-md-12 allPosts">
                             <div className="blog-">
                                 {this.displayPost(this.state.posts)}
                             </div>

@@ -1,11 +1,8 @@
 import React, { Component} from "react";
-import SearchAppBar from "./components/Navbar";
 import StickyFooter from "./components/Footer";
 import Header from "./components/Header";
+import Intro from "./components/Intro"
 import Posts from "./components/Posts"
-
-
-
 
 class App extends Component {
 
@@ -13,8 +10,8 @@ class App extends Component {
 
     return (
       <div>
-        <SearchAppBar />
         <Header />
+        <Intro />
         <Posts />
         <StickyFooter />
       </div>

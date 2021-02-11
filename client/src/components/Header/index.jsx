@@ -8,8 +8,8 @@ function Header() {
     <div className="container">
       <div className="row">
         <div className="headerBox col-md-12">
-          <h1>The Encore</h1>
-          <p className="headerSubtitle">Where the show goes on.</p>
+          <h1>Hike Diary</h1>
+          <p className="headerSubtitle"> Keep Track of Your Treks </p>
         </div>
       </div>
     </div>
