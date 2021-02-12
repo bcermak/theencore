@@ -7,9 +7,6 @@
     width: 500px;
   }
   
-  .btn {
-    margin-top: 10px;
-  }
   
   .allPosts{
     margin: 0 auto;
@@ -30,4 +27,11 @@
   
   .postDate {
     font-size: small;
+  }
+
+  .btn{
+    padding: 7.5px;
+    height: 40px;
+    width: 60px;
+    margin-bottom: 5px;
   }

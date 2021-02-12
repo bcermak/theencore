@@ -117,8 +117,9 @@ class Posts extends React.Component {
                                     onChange={this.handleChange}  
                                     ></textarea>
                                 </div>
-                                <a href="/" className="btn btn-secondary">Cancel</a>
                                 <button type="submit" className="btn btn-primary">Save</button>
+                                <br></br>
+                                <a href="/" className="btn btn-secondary">Cancel</a>  
                             </form>
                         </div>
                     </div>
