@@ -1,1 +1,1 @@
-# theencore
+# Hiker Diary
